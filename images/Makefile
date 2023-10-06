@@ -1,8 +1,8 @@
 %.eepic : %.xp
-	CPP_INCLUDE_PATH=. epix $<
+	epix -I. $<
 
 %.pdf : %.eepic
-	elaps --pdf $<
+	elaps -I. --pdf $<
 
 IMAGE_FILES = 018a.pdf \
 	019a.pdf \
